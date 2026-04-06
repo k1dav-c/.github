@@ -18,8 +18,8 @@ Internal development org — infrastructure, AI tooling, and full-stack applicat
 | Repo | Description |
 |------|-------------|
 | [github-app-mcp-server](https://github.com/k1dav-c/github-app-mcp-server) | AI-driven GitHub App actions: Issue/PR comments, code review, reactions |
-| [Taiwan-Health-MCP](https://github.com/k1dav-c/Taiwan-Health-MCP) | 台灣醫療健康 MCP 伺服器 — ICD-10, FDA, LOINC, FHIR R4 |
-| [ProxmoxMCP-Plus](https://github.com/k1dav-c/ProxmoxMCP-Plus) | Enhanced Proxmox MCP server with full OpenAPI integration |
+| [taiwan-health-mcp](https://github.com/k1dav-c/taiwan-health-mcp) | 台灣醫療健康 MCP 伺服器 — ICD-10, FDA, LOINC, FHIR R4 |
+| [proxmox-mcp-plus](https://github.com/k1dav-c/proxmox-mcp-plus) | Enhanced Proxmox MCP server with full OpenAPI integration |
 | [pokemon-mcp-server](https://github.com/k1dav-c/pokemon-mcp-server) | Traditional Chinese Pokemon data (info, moves, abilities) via FastMCP |
 | [agent-virtual-office](https://github.com/k1dav-c/agent-virtual-office) | Pixel-art virtual office for watching AI agents work in real-time |
 
