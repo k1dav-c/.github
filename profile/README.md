@@ -1,20 +1,8 @@
 # k1dav Lab
 
-我們是一個專注於 AI 落地與全端工程的技術團隊，從模型訓練、MCP 工具鏈、到企業內部系統，打造完整的 AI 應用生態。
+我們是一個專注於 AI 落地與全端工程的技術團隊，從 MCP 工具鏈、到企業內部系統，打造完整的 AI 應用生態。
 
 ---
-
-## 🧠 主權 LLM 訓練
-
-自主訓練繁體中文大型語言模型，聚焦法律、政府及金融領域。
-
-- 橫跨 6 個模型系列、81 次訓練實驗（CPT → SFT → RL 完整流程）
-- 基於 Mistral-24B（ACE-1）與 Gemma-3-27B（ACE-2）微調
-- TMMLU+、TWLegal、MMLU 基準測試驗證
-- B200 GPU 叢集訓練環境（DeepSpeed / NeMo / Ray）
-
-> [`claude-skills`](https://github.com/k1dav-c/claude-skills) — 訓練紀錄與模型開發文件
-> [`claude-consultant`](https://github.com/k1dav-c/claude-consultant) — RD AI 技術策略指南
 
 ## 🤖 MCP 生態系
 
@@ -76,4 +64,4 @@
 
 ## 🔧 技術棧
 
-`FastAPI` `React` `Hasura` `RabbitMQ` `Auth0` `Ory Hydra` `ClickHouse` `Grafana` `Docker` `Terraform` `Ansible` `Proxmox VE` `Coder` `Claude Code` `MCP` `DeepSpeed` `NeMo`
+`FastAPI` `React` `Hasura` `RabbitMQ` `Auth0` `Ory Hydra` `ClickHouse` `Grafana` `Docker` `Terraform` `Ansible` `Proxmox VE` `Coder` `Claude Code` `MCP`
