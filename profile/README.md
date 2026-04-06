@@ -1,81 +1,79 @@
 # k1dav Lab
 
-Internal development org — infrastructure, AI tooling, and full-stack applications.
+我們是一個專注於 AI 落地與全端工程的技術團隊，從模型訓練、MCP 工具鏈、到企業內部系統，打造完整的 AI 應用生態。
 
 ---
 
-## 🏗 Infrastructure
+## 🧠 主權 LLM 訓練
 
-| Repo | Description |
-|------|-------------|
-| [coder-templates](https://github.com/k1dav-c/coder-templates) | Coder workspace Terraform templates (devcontainer, Jupyter, PVE, GitHub runner) |
-| [apmic-devvault](https://github.com/k1dav-c/apmic-devvault) | APMIC DevVault — internal dev platform for managing Coder workspace configs, DBs, and NAS |
-| [coder-dotfiles](https://github.com/k1dav-c/coder-dotfiles) | Modular shell scripts for bootstrapping Coder dev environments (Zsh, Git, Claude Code) |
-| [ansible](https://github.com/k1dav-c/ansible) | Ansible playbooks for Proxmox VE, VM lifecycle, AI training, and system automation |
+自主訓練繁體中文大型語言模型，聚焦法律、政府及金融領域。
 
-## 🤖 MCP Servers
+- 橫跨 6 個模型系列、81 次訓練實驗（CPT → SFT → RL 完整流程）
+- 基於 Mistral-24B（ACE-1）與 Gemma-3-27B（ACE-2）微調
+- TMMLU+、TWLegal、MMLU 基準測試驗證
+- B200 GPU 叢集訓練環境（DeepSpeed / NeMo / Ray）
 
-| Repo | Description |
-|------|-------------|
-| [github-app-mcp-server](https://github.com/k1dav-c/github-app-mcp-server) | AI-driven GitHub App actions: Issue/PR comments, code review, reactions |
-| [taiwan-health-mcp](https://github.com/k1dav-c/taiwan-health-mcp) | 台灣醫療健康 MCP 伺服器 — ICD-10, FDA, LOINC, FHIR R4 |
-| [proxmox-mcp-plus](https://github.com/k1dav-c/proxmox-mcp-plus) | Enhanced Proxmox MCP server with full OpenAPI integration |
-| [pokemon-mcp-server](https://github.com/k1dav-c/pokemon-mcp-server) | Traditional Chinese Pokemon data (info, moves, abilities) via FastMCP |
-| [agent-virtual-office](https://github.com/k1dav-c/agent-virtual-office) | Pixel-art virtual office for watching AI agents work in real-time |
+> [`claude-skills`](https://github.com/k1dav-c/claude-skills) — 訓練紀錄與模型開發文件
+> [`claude-consultant`](https://github.com/k1dav-c/claude-consultant) — RD AI 技術策略指南
 
-## 💬 Discord
+## 🤖 MCP 生態系
 
-| Repo | Description |
-|------|-------------|
-| [discord-message-sync](https://github.com/k1dav-c/discord-message-sync) | Message sync to PostgreSQL with browsing UI, Auth0, Discord OAuth2 |
-| [discord-manager-full](https://github.com/k1dav-c/discord-manager-full) | Full-stack bot management (React 19 + FastAPI + Hasura + RabbitMQ) |
-| [discord-manager](https://github.com/k1dav-c/discord-manager) | Bot/guild/channel manager — Next.js + Apollo + Prisma |
-| [discord-chat-exporter](https://github.com/k1dav-c/discord-chat-exporter) | Chat exporter — FastAPI REST API (JSON, HTML, CSV) |
+打造多個 Model Context Protocol 伺服器，讓 AI 助手能直接操作真實系統。
 
-## 📱 Messaging
+- **Proxmox 虛擬化管理** — 透過 MCP 控制 VM/容器生命週期
+- **台灣醫療健康** — ICD-10 / FDA 藥品 / LOINC / FHIR R4 查詢
+- **GitHub App** — AI 驅動的 Issue/PR 評論、Code Review、自動反應
+- **Pokemon 資料庫** — 繁體中文寶可夢圖鑑，支援招式與特性查詢
+- **Agent Virtual Office** — 像素風虛擬辦公室，即時觀看 AI Agent 工作
 
-| Repo | Description |
-|------|-------------|
-| [line-operator](https://github.com/k1dav-c/line-operator) | LINE platform operations app |
-| [message-operator](https://github.com/k1dav-c/message-operator) | 客服總機 — customer service message hub |
-| [full-ig-reminder](https://github.com/k1dav-c/full-ig-reminder) | Instagram reminder system |
+> [`proxmox-mcp-plus`](https://github.com/k1dav-c/proxmox-mcp-plus) · [`taiwan-health-mcp`](https://github.com/k1dav-c/taiwan-health-mcp) · [`github-app-mcp-server`](https://github.com/k1dav-c/github-app-mcp-server) · [`pokemon-mcp-server`](https://github.com/k1dav-c/pokemon-mcp-server) · [`agent-virtual-office`](https://github.com/k1dav-c/agent-virtual-office)
 
-## 🏪 Lufix POS
+## 📊 股票資料分析平台
 
-| Repo | Description |
-|------|-------------|
-| [lufix-api](https://github.com/k1dav-c/lufix-api) | Backend — FastAPI + Hasura + Ory Hydra OIDC |
-| [lufix-deploy](https://github.com/k1dav-c/lufix-deploy) | Docker Compose deployment |
-| [lufix-page](https://github.com/k1dav-c/lufix-page) | Frontend — Quasar/Vue |
+建置台股資料的完整 ETL pipeline 與分析介面。
 
-## 🔐 Auth (Ory)
+- Kafka 驅動爬蟲，抓取 TWSE / TPEx 上市櫃資料與法人買賣超
+- ClickHouse + Grafana 大數據儀表板
+- TEJ CSV 匯入、Airbyte 資料同步
 
-| Repo | Description |
-|------|-------------|
-| [ory-page](https://github.com/k1dav-c/ory-page) | Ory identity service frontend (TypeScript) |
-| [ory-api](https://github.com/k1dav-c/ory-api) | Ory identity service backend (Python/FastAPI) |
+> [`stock-lab`](https://github.com/k1dav-c/stock-lab)
 
-## 🧠 AI / Productivity
+## 💬 Discord 機器人與訊息管理
 
-| Repo | Description |
-|------|-------------|
-| [jira-tech-board-generator](https://github.com/k1dav-c/jira-tech-board-generator) | AI-powered Jira Epic/Task generator — Next.js + LiteLLM |
-| [claude-consultant](https://github.com/k1dav-c/claude-consultant) | Claude Code consultant configuration and tooling |
-| [claude-skills](https://github.com/k1dav-c/claude-skills) | Custom Claude Code skills and agent configurations |
+從訊息同步到完整的機器人管理後台，支援多伺服器營運。
 
-## 📈 Stock / Finance
+- 訊息同步至 PostgreSQL，提供搜尋與瀏覽 UI
+- 全端機器人管理（React + FastAPI + Hasura + RabbitMQ）
+- 聊天紀錄匯出（JSON / HTML / CSV）
 
-| Repo | Description |
-|------|-------------|
-| [stock-lab](https://github.com/k1dav-c/stock-lab) | 股票資料分析平台 — TEJ CSV, Airbyte, ClickHouse + Grafana |
+> [`discord-message-sync`](https://github.com/k1dav-c/discord-message-sync) · [`discord-manager-full`](https://github.com/k1dav-c/discord-manager-full) · [`discord-manager`](https://github.com/k1dav-c/discord-manager) · [`discord-chat-exporter`](https://github.com/k1dav-c/discord-chat-exporter)
 
-## 📦 Templates & Misc
+## 📱 多渠道客服系統
 
-| Repo | Description |
-|------|-------------|
-| [yeh-stack](https://github.com/k1dav-c/yeh-stack) | Full-stack template: React 19 + FastAPI + Hasura + RabbitMQ + Auth0 |
-| [scheduler](https://github.com/k1dav-c/scheduler) | 排程管理平台 — full-stack scheduler |
-| [bakery-order](https://github.com/k1dav-c/bakery-order) | Bakery ordering app (Google AI Studio / Gemini) |
-| [docusaurus](https://github.com/k1dav-c/docusaurus) | S.Feng 技術手扎 — personal tech blog & wiki |
-| [winhelper](https://github.com/k1dav-c/winhelper) | Windows print job agent (C# WinForms + Hasura subscription) |
-| [ap-mic-org](https://github.com/k1dav-c/ap-mic-org) | AP-MIC organizational chart |
+整合 LINE、Instagram、Telegram 的客服總機與訊息管理。
+
+> [`message-operator`](https://github.com/k1dav-c/message-operator) · [`line-operator`](https://github.com/k1dav-c/line-operator) · [`full-ig-reminder`](https://github.com/k1dav-c/full-ig-reminder)
+
+## 🏪 Lufix POS 系統
+
+點餐 / 零售 POS 平台，整合 Ory Hydra OAuth2 身份驗證。
+
+- FastAPI 後端 + Hasura GraphQL + Ory Hydra OIDC
+- Quasar/Vue 前端 + Docker Compose 一鍵部署
+- Windows 列印代理（C# WinForms + GraphQL Subscription 即時接單）
+
+> [`lufix-api`](https://github.com/k1dav-c/lufix-api) · [`lufix-page`](https://github.com/k1dav-c/lufix-page) · [`lufix-deploy`](https://github.com/k1dav-c/lufix-deploy) · [`winhelper`](https://github.com/k1dav-c/winhelper)
+
+## 🏗 DevOps / 基礎設施
+
+標準化的開發環境與自動化部署。
+
+- **Coder 雲端工作區** — Terraform 模板（devcontainer / Jupyter / PVE / GitHub Runner）
+- **Ansible 自動化** — Proxmox VE、VM 生命週期、AI 訓練環境配置
+- **Nix Dotfiles** — Zsh / Git / Claude Code 開發環境 bootstrap
+
+> [`coder-templates`](https://github.com/k1dav-c/coder-templates) · [`coder-dotfiles`](https://github.com/k1dav-c/coder-dotfiles) · [`ansible`](https://github.com/k1dav-c/ansible) · [`apmic-devvault`](https://github.com/k1dav-c/apmic-devvault)
+
+## 🔧 技術棧
+
+`FastAPI` `React` `Hasura` `RabbitMQ` `Auth0` `Ory Hydra` `ClickHouse` `Grafana` `Docker` `Terraform` `Ansible` `Proxmox VE` `Coder` `Claude Code` `MCP` `DeepSpeed` `NeMo`
