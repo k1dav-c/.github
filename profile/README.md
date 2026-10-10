@@ -2,7 +2,7 @@
 
 我們是一個專注於 AI 落地與全端工程的技術團隊，從 MCP 工具鏈、到企業內部系統，打造完整的 AI 應用生態。
 
-📝 技術筆記：<https://www.k1dav.fun>
+📝 技術筆記：<https://www.k1dav.fun> · 🗂 所有作品：<https://www.k1dav.fun/projects>
 
 ---
 
@@ -14,8 +14,8 @@
 
 | 專案 | 說明 |
 | --- | --- |
-| [`proxmox-mcp-plus`](https://github.com/k1dav-c/proxmox-mcp-plus) | Proxmox VE 管理：VM / 容器生命週期、OpenAPI 介面 |
-| [`taiwan-health-mcp`](https://github.com/k1dav-c/taiwan-health-mcp) | 台灣醫療健康：ICD-10 / FDA 藥品 / LOINC / FHIR R4 查詢 |
+| [`proxmox-mcp-plus`](https://github.com/k1dav-c/proxmox-mcp-plus) | Proxmox VE 管理：VM / 容器生命週期、OpenAPI 介面（已封存） |
+| [`taiwan-health-mcp`](https://github.com/k1dav-c/taiwan-health-mcp) | 台灣醫療健康：ICD-10 / FDA 藥品 / LOINC / FHIR R4 查詢（已封存） |
 | [`pokemon-mcp-server`](https://github.com/k1dav-c/pokemon-mcp-server) | 繁體中文寶可夢圖鑑，支援招式與特性查詢 |
 
 ### 🧑‍💻 AI Agent 工具
