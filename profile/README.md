@@ -6,6 +6,10 @@
 
 ---
 
+## 📱 App
+
+**[平平記帳 Evenly](https://apps.apple.com/us/app/evenly-balanced-books/id6790163143)** — 拖一下記一筆，每一筆都平衡。複式簿記的 iOS 記帳 App，支援信用卡帳期、多幣別、拆帳與 iCloud 共享資產。（[官網](https://k1dav-c.github.io/ping-ping-accounting/)）
+
 ## 🚀 開源專案
 
 ### 🤖 MCP 伺服器
