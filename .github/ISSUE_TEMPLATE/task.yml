@@ -1,10 +1,10 @@
 name: 開發任務
-description: 寫成 agent 不必再問就能開發的需求；加上 agent label 後交給 agentapi 開發
+description: 寫成 agent 不必再問就能開發的需求；在 agentapi hub 交辦後由 agent 開發
 body:
   - type: markdown
     attributes:
       value: |
-        這份 issue 可以直接交給 agent：加上 `agent` 或 `agent:claude`／`agent:codex`／`agent:pi` label 後，agent 會讀完 issue 與留言，開分支、實作、跑測試，然後開 PR。
+        這份 issue 可以直接交給 agent：在 agentapi hub 的 Issues 頁按 Assign 後，agent 會讀完 issue 與留言，開分支、實作、跑測試，然後開 PR；issue 上的 `agent:<type>` label 標出由哪個 agent 處理。
         agent 只看得到這裡寫的內容和 repo 的 `AGENTS.md`。需求不清楚時，它會在 issue 留言提問並停下。PR 上的 review 或 `/agent …` 留言會轉給同一個 agent。
 
         **不要貼密碼、token 或金鑰**，只寫變數名稱和放在哪裡。
