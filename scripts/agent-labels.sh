@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Creates the labels of the issue dispatch in each repository given, or
+# Creates the labels the agentapi hub puts on the issues it assigns (they
+# start nothing) in each repository given, or
 # updates their color and description when they exist:
 #   scripts/agent-labels.sh k1dav-c/full-stack-template k1dav-c/foo
 set -euo pipefail
@@ -10,10 +11,10 @@ if [ "$#" -eq 0 ]; then
 fi
 
 labels=(
-	"agent|5319e7|交給 agentapi 開發，用主機預設的 agent"
-	"agent:claude|d97757|交給 agentapi 的 Claude 開發"
-	"agent:codex|10a37f|交給 agentapi 的 Codex 開發"
-	"agent:pi|1d76db|交給 agentapi 的 pi 開發"
+	"agent|5319e7|由 agentapi 的 agent 處理"
+	"agent:claude|d97757|由 agentapi 的 Claude 處理"
+	"agent:codex|10a37f|由 agentapi 的 Codex 處理"
+	"agent:pi|1d76db|由 agentapi 的 pi 處理"
 )
 
 for repo in "$@"; do
