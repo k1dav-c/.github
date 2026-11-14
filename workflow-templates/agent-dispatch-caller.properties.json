@@ -1,0 +1,6 @@
+{
+  "name": "Agent dispatch",
+  "description": "把加上 agent 或 agent:<claude|codex|pi> label 的 issue 交給 agentapi hub 開發，PR 的 review 轉給同一個 agent。只用於 private repo。",
+  "iconName": "octicon dependabot",
+  "categories": ["Automation"]
+}

@@ -1,0 +1,24 @@
+# Hands this repository's issues to the agentapi hub: an issue labeled
+# agent or agent:<claude|codex|pi> starts a job, and the reviews and
+# "/agent …" comments of its pull request go to the same agent. The work is
+# done by k1dav-c/.github's agent-dispatch.yml on the self-hosted runners
+# labeled agent-dispatch; private repositories only.
+name: agent
+
+on:
+  issues:
+    types: [labeled]
+  issue_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+  pull_request:
+    types: [opened, closed]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  dispatch:
+    uses: k1dav-c/.github/.github/workflows/agent-dispatch.yml@main

@@ -1,0 +1,70 @@
+name: 開發任務
+description: 寫成 agent 不必再問就能開發的需求；加上 agent label 後交給 agentapi 開發
+body:
+  - type: markdown
+    attributes:
+      value: |
+        這份 issue 可以直接交給 agent：加上 `agent` 或 `agent:claude`／`agent:codex`／`agent:pi` label 後，agent 會讀完 issue 與留言，開分支、實作、跑測試，然後開 PR。
+        agent 只看得到這裡寫的內容和 repo 的 `AGENTS.md`。需求不清楚時，它會在 issue 留言提問並停下。PR 上的 review 或 `/agent …` 留言會轉給同一個 agent。
+
+        **不要貼密碼、token 或金鑰**，只寫變數名稱和放在哪裡。
+  - type: textarea
+    id: goal
+    attributes:
+      label: 要做什麼
+      description: 要的結果，以及為什麼要做。是 bug 的話，寫重現步驟、預期結果和實際結果。
+      placeholder: |
+        API 範例頁要示範 WebSocket，讓新專案知道怎麼接即時資料。
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 範圍
+      description: 要改哪些目錄、頁面或服務，以及明確不做的事。agent 只做這裡列的，不會順手加功能。
+      placeholder: |
+        要改：frontend/src/pages/examples、backend 的 WS endpoint
+        不做：不改其他頁面的版面；不動 hasura/metadata
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 驗收條件
+      description: 做完時可以逐項檢查的結果，寫成清單。
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: 已決定的事
+      description: 有幾種做法、或有項目要保留或刪除時，先寫下決定，agent 就不必停下來問。
+      placeholder: |
+        - 用原生 WebSocket，不加套件
+        - 範例頁放在 /examples，不放首頁
+  - type: checkboxes
+    id: verify
+    attributes:
+      label: 驗證
+      description: repo 的 lint 和測試一律要跑（見 AGENTS.md）。另外需要的：
+      options:
+        - label: 改到畫面：在 PR 附上手機與桌面寬度的截圖
+        - label: 需要 Docker、VM 或部署環境才能驗證：agent 做不到的部分，在 PR 列成待驗收清單
+        - label: 要更新文件（README、AGENTS.md 或 docs/）
+  - type: textarea
+    id: design
+    attributes:
+      label: 畫面與設計
+      description: 參考截圖或連結、要沿用的元件、品牌色、深淺色主題、版面寬度。沒有改畫面就留空。
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境與憑證
+      description: 需要的環境變數或 secret（只寫名稱和放在哪裡）、外部服務、只能從內網連的位址、要在哪台機器或哪個映像上執行。
+  - type: textarea
+    id: impact
+    attributes:
+      label: 合併後的影響
+      description: 合併後會自動部署或影響其他人的地方，例如「push 到 main 後所有 Coder workspace 會更新」。沒有就留空。
