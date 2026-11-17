@@ -1,52 +1,34 @@
 # k1dav Lab
 
-我們是一個專注於 AI 落地與全端工程的技術團隊，從 MCP 工具鏈、到企業內部系統，打造完整的 AI 應用生態。
+k1dav Lab 開發 AI 工具與實用應用，作品涵蓋 coding agent 工作流程、MCP 整合、企業內部系統與 iOS App。
 
-📝 技術筆記：<https://www.k1dav.fun> · 🗂 所有作品：<https://www.k1dav.fun/projects>
+[技術筆記](https://www.k1dav.fun) · [作品總覽](https://www.k1dav.fun/projects)
 
----
+## 自行開發的作品
 
-## 📱 App
+| 作品                                                                    | 能做什麼                                                                         | 入口                                                                                                                                    |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 平平記帳 Evenly                                                         | 以拖曳操作記錄複式帳務，管理信用卡帳期、多幣別、拆帳與指定支付工具的 iCloud 共享 | [App Store](https://apps.apple.com/us/app/evenly-balanced-books/id6790163143) · [官網](https://k1dav-c.github.io/ping-ping-accounting/) |
+| [Agent Virtual Office](https://github.com/k1dav-c/agent-virtual-office) | 用像素辦公室呈現 AI Agent 的工作狀態與任務，透過 MCP 回報進度                    | 原始碼與架設方式見 repo                                                                                                                 |
+| [Bakery Order](https://github.com/k1dav-c/bakery-order)                 | 在瀏覽器整理烘焙店與團購的 Excel 訂單，計算金額並產生取貨報表                    | [線上使用](https://k1dav-c.github.io/bakery-order/)                                                                                     |
+| [Pokemon MCP Server](https://github.com/k1dav-c/pokemon-mcp-server)     | 讓 AI 助手以繁體中文查詢寶可夢、招式與特性，資料由本地 JSON 提供                 | 安裝與 MCP 設定見 repo                                                                                                                  |
 
-**[平平記帳 Evenly](https://apps.apple.com/us/app/evenly-balanced-books/id6790163143)** — 拖一下記一筆，每一筆都平衡。複式簿記的 iOS 記帳 App，支援信用卡帳期、多幣別、拆帳與 iCloud 共享資產。（[官網](https://k1dav-c.github.io/ping-ping-accounting/)）
+## 持續擴充的開源工具
 
-## 🚀 開源專案
+[Tendyard（agentapi）](https://github.com/k1dav-c/agentapi) 是我們獨立維護的 [coder/agentapi](https://github.com/coder/agentapi) fork，使用自己的版本與發行流程。目前透過原生協定操作 Claude Code、Codex 與 Pi，提供 Web Chat、跨機器 hub、GitHub issue 派工與工作追蹤。
 
-### 🤖 MCP 伺服器
+[agentapi-demo](https://github.com/k1dav-c/agentapi-demo) 是文件示範專案，用來展示 agent 接 issue、開 PR、回覆 review 與回報成本的流程。
 
-讓 AI 助手能直接操作真實系統。
+## 其他 fork 與已封存專案
 
-| 專案 | 說明 |
-| --- | --- |
-| [`proxmox-mcp-plus`](https://github.com/k1dav-c/proxmox-mcp-plus) | Proxmox VE 管理：VM / 容器生命週期、OpenAPI 介面（已封存） |
-| [`taiwan-health-mcp`](https://github.com/k1dav-c/taiwan-health-mcp) | 台灣醫療健康：ICD-10 / FDA 藥品 / LOINC / FHIR R4 查詢（已封存） |
-| [`pokemon-mcp-server`](https://github.com/k1dav-c/pokemon-mcp-server) | 繁體中文寶可夢圖鑑，支援招式與特性查詢 |
+| 專案                                                              | 用途                                         | 狀態與來源                                                                                                  |
+| ----------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [MoneyPrinterTurbo](https://github.com/k1dav-c/MoneyPrinterTurbo) | 依主題產生短影片的自動化工具                 | Fork 自 [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)                       |
+| [proxmox-mcp-plus](https://github.com/k1dav-c/proxmox-mcp-plus)   | Proxmox VE 虛擬機與容器管理                  | 已封存；fork 自 [RekklesNA/ProxmoxMCP-Plus](https://github.com/RekklesNA/ProxmoxMCP-Plus)                   |
+| [taiwan-health-mcp](https://github.com/k1dav-c/taiwan-health-mcp) | 台灣 ICD-10、FDA 藥品、LOINC 與 FHIR R4 查詢 | 已封存；fork 自 [healthymind-tech/Taiwan-Health-MCP](https://github.com/healthymind-tech/Taiwan-Health-MCP) |
 
-### 🧑‍💻 AI Agent 工具
+## 其他開發經驗
 
-| 專案 | 說明 |
-| --- | --- |
-| [`agentapi`](https://github.com/k1dav-c/agentapi) | 以 HTTP API 操作 Claude Code、Codex、Aider 等 coding agent，附 Web Chat 介面 |
-| [`agent-virtual-office`](https://github.com/k1dav-c/agent-virtual-office) | 像素風虛擬辦公室，即時觀看 AI Agent 工作 |
+未公開的專案涵蓋台股資料擷取與分析、Discord 訊息歸檔、多渠道客服、POS 與進銷存，以及 Coder／Proxmox 開發環境自動化。
 
-### 🛠 小工具
-
-| 專案 | 說明 |
-| --- | --- |
-| [`bakery-order`](https://github.com/k1dav-c/bakery-order) | 烘焙店 / 團購訂單 Excel 整理與報表工具（[線上使用](https://k1dav-c.github.io/bakery-order/)） |
-
----
-
-## 🏗 其他經驗
-
-以下專案目前未公開，列出我們做過的領域：
-
-- **📊 股票資料分析平台**：Kafka 驅動爬蟲抓取 TWSE / TPEx 資料，ClickHouse + Grafana 儀表板
-- **💬 Discord 機器人與訊息管理**：訊息同步至 PostgreSQL、全端管理後台（React + FastAPI + Hasura + RabbitMQ）、聊天紀錄匯出
-- **📱 多渠道客服系統**：整合 LINE、Instagram、Telegram 的客服總機
-- **🏪 POS 系統**：FastAPI + Hasura + Ory Hydra OIDC 後端、Quasar/Vue 前端、Windows 列印代理即時接單
-- **⚙️ DevOps / 基礎設施**：Coder 雲端工作區 Terraform 模板、Ansible 自動化 Proxmox VE、Nix dotfiles
-
-## 🔧 技術棧
-
-`FastAPI` `React` `Hasura` `RabbitMQ` `Auth0` `Ory Hydra` `ClickHouse` `Grafana` `Docker` `Terraform` `Ansible` `Proxmox VE` `Coder` `Claude Code` `MCP`
+常用技術：FastAPI、React、Hasura、RabbitMQ、PostgreSQL、ClickHouse、Grafana、Docker、Terraform、SwiftUI 與 MCP。
